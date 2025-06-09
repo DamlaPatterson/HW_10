@@ -1,0 +1,31 @@
+    1  git config --global user.name "Damla Patterson"
+    2  git config --global user.email "damlapatterson@hotmail.com"
+    3  git clone https://github.com/DamlaPatterson/HW_10.git
+    4  rm -rf HW_10
+    5  git clone https://github.com/DamlaPatterson/HW_10.git
+    6  git status
+    7  cd HW_10
+    8  git status
+    9  touch text_ignore.txt
+   10  nano .gitignore
+   11  git status
+   12  git add .gitignore
+   13  git commit -m "Add text_ignore.txt to .gitignore"
+   14  touch main_test.txt
+   15  git add .
+   16  git commit -m "Add main_test.txt"
+   17  git log --oneline
+   18  git checkout -b develop
+   19  touch develop_test.txt
+   20  git add .
+   21  git commit -m "Add develop_test.txt"
+   22  echo "Bu bir testtir" >>develop_test.txt
+   23  nano develop_test.txt
+   24  git status
+   25  git add develop_test.txt
+   26  git commit -m "Update develop_test.txt with content"
+   27  git log --oneline
+   28  git checkout main
+   29  git merge develop
+   30  git log --oneline
+   31  history > command_list.csv
